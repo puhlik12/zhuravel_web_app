@@ -16,15 +16,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Регистрация</title>
+    <title>Register</title>
 </head>
 <body>
-    <h1>Регистрация</h1>
+    <h1>Register</h1>
     <form method="POST">
-        <input type="text" name="username" placeholder="Имя пользователя" required>
-        <input type="password" name="password" placeholder="Пароль" required>
-        <button type="submit">Зарегистрироваться</button>
+        <input type="text" name="username" placeholder="user" required>
+        <input type="password" name="password" placeholder="pass" required>
+        <button type="submit">zaregistririvatsa</button>
     </form>
-    <p>Уже есть аккаунт? <a href="login.php">Войти</a></p>
+    <p>Haw accaunt? <a href="login.php">sgnin</a></p>
 </body>
 </html>

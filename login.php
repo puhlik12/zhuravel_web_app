@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: welcome.php');
         exit;
     } else {
-        $error = "Неверные учетные данные";
+        $error = "invalig";
     }
 }
 ?>
@@ -21,16 +21,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Авторизация</title>
+    <title>Awtarization</title>
 </head>
 <body>
-    <h1>Авторизация</h1>
+    <h1>Awtarization</h1>
     <?php if (isset($error)) echo "<p style='color:red'>$error</p>"; ?>
     <form method="POST">
-        <input type="text" name="username" placeholder="Имя пользователя" required>
-        <input type="password" name="password" placeholder="Пароль" required>
-        <button type="submit">Войти</button>
+        <input type="text" name="username" placeholder="user" required>
+        <input type="password" name="password" placeholder="pass" required>
+        <button type="submit">signin</button>
     </form>
-    <p>Нет аккаунта? <a href="register.php">Зарегистрироваться</a></p>
+    <p>Nety? <a href="register.php">Regnytsa</a></p>
 </body>
 </html>
