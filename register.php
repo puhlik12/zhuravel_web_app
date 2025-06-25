@@ -2,12 +2,12 @@
 require 'database.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $_POST['username']; 
+    $password = $_POST['password']; 
     
     $db->exec("INSERT INTO users (username, password) VALUES ('$username', '$password')");
     
-    header('Location: login.php');
+    header("Location: login.php");
     exit;
 }
 ?>

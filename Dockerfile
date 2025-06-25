@@ -3,4 +3,5 @@ FROM php:7.4-apache
 WORKDIR /var/www/html
 COPY . .
 
-RUN chown -R www-data:www-data /var/www/html
+RUN chmod 777 -R /var/www/html # Опасные права
+EXPOSE 80
