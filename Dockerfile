@@ -1,7 +1,14 @@
-FROM php:7.4-apache
+FROM php:8.2-apache
 
-WORKDIR /var/www/html
-COPY . .
+RUN apt-get update && apt-get install -y sqlite3
 
-RUN chmod 777 -R /var/www/html # Опасные права
-EXPOSE 80
+COPY . /var/www/html/
+
+RUN sqlite3 /var/www/html/database.db "CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT);"
+
+RUN chown -R www-data:www-data /var/www/html/
+RUN chmod 755 /var/www/html/database.db
+
+RUN a2enmod rewrite
+
+CMD ["apache2-foreground"]
